@@ -17,7 +17,7 @@ nmap ,. [unite]
 " file_rec
 " 入力された絞り込みテキストのディレクトリまたは、現在ディレクトリ直下のファイルすべてを候補とする。
 " ディレクトリや隠しファイルは候補から除外される。候補が多すぎる場合はフリーズするかもしれない。
-nnoremap <silent> [unite]u :<C-u>Unite -buffer-name=files_rec buffer bookmark file file_rec<CR>
+nnoremap <silent> [unite]u :<C-u>Unite -buffer-name=files_rec buffer bookmark file file_rec -default-action=tabopen<CR>
 
 " カレント全部乗せ
 " UniteWithBufferDir  初期の絞込みテキストが現在のバッファのディレクトリである他はUniteと同じ
@@ -49,5 +49,5 @@ function! s:unite_my_settings()"{{{
     imap <buffer> <C-w>   <Plug>(unite_delete_backward_path)
 
     " Start insert.
-    let g:unite_enable_start_insert = 1
+"    let g:unite_enable_start_insert = 1
 endfunction"}}}
