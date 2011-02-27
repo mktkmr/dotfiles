@@ -5,8 +5,6 @@ filetype on
 
 syntax on
 
-colorscheme torte
-
 " TabLineの色設定
 hi TabLine     term=reverse cterm=reverse ctermfg=white ctermbg=black
 hi TabLineSel  term=bold cterm=bold,underline ctermfg=5
@@ -15,13 +13,7 @@ hi TabLineFill term=reverse cterm=reverse ctermfg=white ctermbg=black
 " コメントの行で改行すると次の行の頭にコメントを自動的に挿入してくれる機能がうざいので殺す
 autocmd FileType * setlocal formatoptions-=ro
 
-" カレントラインに下線を表示する
-set cursorline
-
 set clipboard=unnamed
-
-" タブやスペースを可視化する
-set list listchars=eol:$,tab:^\ ,trail:_,
 
 set history=1000
 set textwidth=0
@@ -53,10 +45,6 @@ set wrapscan incsearch
 " start   : 挿入モード開始位置より手前の文字
 set backspace=indent,eol,start
 
-" 行番号を表示する
-set nocompatible
-set number
-
 " カレントディレクトリを自動で変更
 " set autochdir
 
@@ -69,36 +57,6 @@ set virtualedit=block
 " ペーストモードをトグルする
 set pastetoggle=<C-E>
 
-" コマンドラインで補完候補を表示する
-set wildmenu
-set wildmode=longest:full
-
-" カーソル行の上下に表示する行数を増やす
-set scrolloff=10
-
-" マウスモードを有効にする
-set mouse=a
-" screen対応
-set ttymouse=xterm2
-
 " カーソルを行頭、行末で止まらないようにする
 set whichwrap=b,s,h,l,<,>,[,],~
 
-" for Search_pm map
-"noremap fg :call Search_pm('vne')<ENTER>
-noremap fg :call Search_pm('tabe')<ENTER>
-noremap ff :call Search_pm('e')<ENTER>
-noremap fd :call Search_pm('sp')<ENTER>
-
-nmap <silent> <F7> :NERDTreeToggle<CR>
-nmap <silent> <F8> :bp<CR>
-nmap <silent> <F9> :bn<CR>
-
-noremap <Tab> gt
-noremap <S-Tab> gT
-
-" ステータスラインを表示するウィンドウを設定する。
-" 0: 一番下のウィンドウはステータスラインを表示しない
-" 1: ウィンドウが1つの時はステータスラインを表示しない。 2つ以上ある場合は、ステータスラインを表示する
-" 2: 常にステータスラインを表示する
-set laststatus=2
