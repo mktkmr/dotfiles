@@ -1,5 +1,6 @@
 
 colorscheme torte
+"colorscheme calmar256-dark
 
 " カレントラインに下線を表示する
 set cursorline
@@ -13,7 +14,7 @@ set number
 
 " コマンドラインで補完候補を表示する
 set wildmenu
-set wildmode=longest:full
+set wildmode=full
 
 " カーソル行の上下に表示する行数を増やす
 set scrolloff=10
