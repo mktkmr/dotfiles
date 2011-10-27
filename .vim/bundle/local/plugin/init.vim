@@ -5,6 +5,11 @@ filetype on
 
 syntax on
 
+" reset my auto command group
+augroup MktkmrAutoCmd
+  autocmd!
+augroup END
+
 " TabLineの色設定
 hi TabLine     term=reverse cterm=reverse ctermfg=white ctermbg=black
 hi TabLineSel  term=bold cterm=bold,underline ctermfg=5
